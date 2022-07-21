@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\guvi"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "guvi"
+	}
+}

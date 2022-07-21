@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.propic {
+  heigth: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius:50%;
+}

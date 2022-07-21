@@ -8,8 +8,7 @@ request.send();
 request.onload=function(){
     var data=JSON.parse(request.response);
     console.log(data);
-var res=data.filter((ele)=>ele.region==="asia");
-for(var i=0;i<res.length;i++){
-    console.log(res[i].name)
+    var res=data.reduce((sum,cv)=>sum,cv);
+    console.log(res);
 }
-}
+

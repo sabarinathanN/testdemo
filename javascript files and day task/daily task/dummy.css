@@ -1,0 +1,14 @@
+.heading{
+    text-align: center;
+    background-color:lightblue;
+}
+.content
+{
+    text-align: center;
+    background-color:lightcyan;
+}
+.image{
+   width:50%;
+   height:10rem;
+   background-position:left;
+}
