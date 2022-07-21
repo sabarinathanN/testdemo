@@ -15,11 +15,12 @@ let addtask=()=>{
 let markdone=(id)=>{
   console.log("id",id);
   let itemIndex=list.findIndex(obj =>obj.id===id)
-  //console.log("itemIndex",itemIndex);
-  // console.log("name",list[itemIndex].name);
-  // console.log("list[itemIndex].isDone",list[itemIndex].isDone)
-  list[itemIndex].isDone = true;
-  // console.log("list[itemIndex].isDone",list[itemIndex].isDone)
+  //list[itemIndex].isDone = true;
+  if(list[itemIndex].isDone===false){
+    list[itemIndex].isDone=true;
+  } else if(list[itemIndex].isDone===true){
+    list[itemIndex].isDone=false;
+  }
   setlist([...list])
 }
 //delete tsk function
@@ -35,20 +36,21 @@ const makedelete=(id)=>{
 return(
 
 <div className="container">
-  <h1>TO DO APP</h1>
-<input type="text" onChangeCapture={(e)=>setcurrenttask(e.target.value)} />
+  <h1 className="head">TO DO APP</h1>
+<input className="textbox" type="text" onChangeCapture={(e)=>setcurrenttask(e.target.value)} placeholder="Enter the task"/>
 <button className="button"onClick={addtask}>ADD TASK</button>
 
 <ul>
   {
     list.map((item)=>{
       return <li className={item.isDone ? 'markdone':' '}>
-        {item.name}- <button onClick={()=>markdone(item.id)}>Done</button>- <button onClick={()=>makedelete(item.id)}>Delete</button></li>
+        {item.name}   <button className="bt-1" onClick={()=>markdone(item.id)}>Done</button>   <button className="bt-2" onClick={()=>makedelete(item.id)}>Delete</button></li>
     })
   }
 </ul>
 
 <img className="todo" src="http://www.clipartbest.com/cliparts/aTq/L7L/aTqL7LA8c.jpg"/>
+<div className="footer"><h4>&copy; 2021-2022 |SABARINATHAN N |ALL Rights Reserved</h4></div>
 </div>  
 
 
